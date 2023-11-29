@@ -1,0 +1,20 @@
+{
+  "MemoryPageFactRegistry": "0xD11cbd0b252569Ff67551A95b33da45b23814d24",
+  "MerkleStatementContract": "0xe23195D7359297Be8d89F37a06240D63E527B623",
+  "FriStatementContract": "0x757c47a259FC8d3d4fDB53db53972C1B207976C1",
+  "cpuOods": "0x2d95f98a9a6666813ed0eafC82BEF5AAa3954337",
+  "CpuConstraintPoly": "0x53DcBFCD5F642A569136B850b9fCf559AAE32A0f",
+  "PedersenHashPointsXColumn": "0xd3B0cCA0aEbf05d09f7D2C8e6Dbad68f2f1A7606",
+  "PedersenHashPointsYColumn": "0xFe3712F51A44754ff118a79a34A077fEB9F1A67D",
+  "EcdsaPointsXColumn": "0x62D52dAcf9dcA6fC0fC7440a56018e765878A563",
+  "EcdsaPointsYColumn": "0x0985891cB441586340cFF7DDD6743DD2ae78Feb1",
+  "PoseidonPoseidonFullRoundKey0Column": "0x33f3D1Cf874Fc7dDc1cdF0E1983d8b53D3476AF9",
+  "PoseidonPoseidonFullRoundKey1Column": "0xC156B64e7018D204a3DC419273B3671c3622F33a",
+  "PoseidonPoseidonFullRoundKey2Column": "0x1f59BA73b2FBFE1479D6db2615733d5127e3649D",
+  "PoseidonPoseidonPartialRoundKey0Column": "0xE1767E43303B5319aCeFe38aC1BcBA0828bBC0c2",
+  "PoseidonPoseidonPartialRoundKey1Column": "0xaf9bB8Be987664D57e4091cf01A3EEE7829482Df",
+  "CpuFrilessVerifier": "0xC11B019217c0B9d33f6C253B5ad8e5079370fb45",
+  "CairoBootloaderProgramPart1": "0x93a2f43b7077a70A3f3C5146b2c47E19Bf6fc129",
+  "CairoBootloaderProgramPart2": "0x9709DfC33B8Fa0B266fc18B966483a0Ae4C54Da8",
+  "GpsStatementVerifier": "0x46b18558a21Ce1B49166D5ab23B22D315bE2E591"
+}
