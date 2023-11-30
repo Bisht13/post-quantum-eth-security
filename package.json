@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Bisht13/brb#readme",
   "dependencies": {
     "dotenv": "^16.3.1",
+    "ethers": "5.7.2",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.2.0",
     "solc": "^0.8.23-fixed",
