@@ -64,6 +64,7 @@ Step-by-step instructions on how to generate and verify the proof. Currently, wo
 1. Set up the environment variables. `Note: SIGNER_PRIVATE_KEY and SIGNER_PUBLIC_KEY do not start with '0x' but SIGNER_ADDRESS does.`
 2. Generate public and private inputs for the proof. 
     ```sh
+        npm i
         node scripts/breakPubkey.js
         node scripts/publicInputGen.js
     ```

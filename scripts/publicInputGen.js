@@ -3,7 +3,7 @@ const contractAbi = require("./abi.json");
 const fs = require("fs");
 require("dotenv").config();
 
-const yourAddress = "0xc340b2c55d705cb4d1fb3a5d28399c7bc6fc6f37";
+const yourAddress = process.env.SIGNER_ADDRESS;
 const nonce = process.env.NONCE;
 
 const contractAddress = "0x8bF42b42C49082E85a9c42A7A052B487A1BEE2e8";
