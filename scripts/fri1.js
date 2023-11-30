@@ -852,4 +852,4 @@ const txn = await contract.verifyFRI(
     evalPoint,
     stepSize,
     root
-);
+)

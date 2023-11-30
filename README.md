@@ -61,7 +61,7 @@ To run the project, you need to setup the following:
 
 Step-by-step instructions on how to generate and verify the proof. Currently, works only on the Sepolia testnet.
 
-1. Set up the environment variables. `Note: SIGNER_PRIVATE_KEY and SIGNER_PUBLIC_KEY do not start with '0x' but SIGNER_ADDRESS does.`
+1. Set up the environment variables. `Note: SIGNER_PRIVATE_KEY and SIGNER_PUBLIC_KEY do not start with '0x' but SIGNER_ADDRESS does. Remove '0x40' from public key if present, this is used to define memory space and technically is not a part of the public key.`
 2. Generate public and private inputs for the proof. 
     ```sh
         npm i
@@ -89,16 +89,16 @@ Step-by-step instructions on how to generate and verify the proof. Currently, wo
         prove --lde-blowup-factor 4 --num-queries 33 --proof-of-work-bits 30 --air-private-input air-private-input.json \
         --output bootloader-proof.bin
 
-    cargo run
+    cargo +nightly run
 
     cd ..
     ```
 4. After the proof is generated, we would create multiple JS files for submitting the proof to the blockchain.
    ```sh
     python3.9 scripts/genJSFiles.py \
-        --proof ../sandstorm-starkware-verifier-integration/test/AutoGenProofData.sol \
+        --proof ./sandstorm-starkware-verifier-integration/test/AutoGenProofData.sol \
         --output_folder ./scripts \
-        --public_inputs ../sandstorm-starkware-verifier-integration/bootloader_inputs.json
+        --public_inputs ./sandstorm-starkware-verifier-integration/bootloader_inputs.json
    ```
 5. Verify the proof.
    ```sh

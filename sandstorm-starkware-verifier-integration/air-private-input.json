@@ -1,6 +1,6 @@
 {
-    "trace_path": "/home/poseidon/sandstorm-starkware-verifier-integration/trace.bin",
-    "memory_path": "/home/poseidon/sandstorm-starkware-verifier-integration/memory.bin",
+    "trace_path": "/Users/paradox/Desktop/projects/brb/sandstorm-starkware-verifier-integration/trace.bin",
+    "memory_path": "/Users/paradox/Desktop/projects/brb/sandstorm-starkware-verifier-integration/memory.bin",
     "pedersen": [],
     "range_check": [
         {

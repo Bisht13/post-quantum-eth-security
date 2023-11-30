@@ -154,6 +154,17 @@ const txn = await contract.verifyFRI(
     stepSize,
     root
 );
+
+    await txn.wait();
+    console.log("Mined -- ", txn.hash);
+
+    // web3.eth.sendSignedTransaction((await signedTransaction).rawTransaction);
+  } catch (error) {
+    console.log("Connection Error! ", error);
+  }
+}
+
+main();
 """
 gpsHeader = """
 const { ethers } = require("ethers");
