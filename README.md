@@ -107,3 +107,5 @@ Step-by-step instructions on how to generate and verify the proof. Currently, wo
    ```
 
 On completion, the proof will be verified on chain.
+
+To see a demo of the project, check out this [video](https://drive.google.com/file/d/1pzCRlZFrfC4wWtRjAEcGmLhl6ieIb9rG/view?usp=sharing).
