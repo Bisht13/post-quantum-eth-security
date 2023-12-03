@@ -225,14 +225,14 @@ contract GpsStatementVerifier is
             uint256[1000]
                 memory bootloaderProgramPart1 = bootloaderProgramPart1ContractAddress
                     .getCompiledProgram();
-            uint256[766]
+            uint256[740]
                 memory bootloaderProgramPart2 = bootloaderProgramPart2ContractAddress
                     .getCompiledProgram();
-            uint256[1766] memory bootloaderProgram;
+            uint256[1740] memory bootloaderProgram;
             for (uint256 i = 0; i < 1000; i++) {
                 bootloaderProgram[i] = bootloaderProgramPart1[i];
             }
-            for (uint256 i = 0; i < 766; i++) {
+            for (uint256 i = 0; i < 740; i++) {
                 bootloaderProgram[1000 + i] = bootloaderProgramPart2[i];
             }
             for (uint256 i = 0; i < bootloaderProgram.length; i++) {
@@ -305,7 +305,7 @@ contract GpsStatementVerifier is
             {
                 uint256 outputAddress = cairoAuxInput[OFFSET_OUTPUT_BEGIN_ADDR];
                 publicMemory[offset + 0] = outputAddress;
-                publicMemory[offset + 1] = publicMemoryData[0]; //publicInputNonce;
+                publicMemory[offset + 1] = publicMemoryData[0]; //publicInputAddress;
                 publicMemory[offset + 2] = outputAddress + 1; //publicInputNonce;
                 publicMemory[offset + 3] = publicMemoryData[1]; //publicInputHashLow;
                 publicMemory[offset + 4] = outputAddress + 2;

@@ -9,7 +9,7 @@ from starkware.cairo.common.cairo_secp.bigint import BigInt3, uint256_to_bigint
 from starkware.cairo.common.cairo_secp.signature import public_key_point_to_eth_address
 from starkware.cairo.common.uint256 import Uint256, felt_to_uint256
 
-func proof{output_ptr: felt*,pedersen_ptr: HashBuiltin*,range_check_ptr,ecdsa_ptr,bitwise_ptr: BitwiseBuiltin*,ec_op_ptr,poseidon_ptr}(nonce: felt, hash: Uint256) -> () {
+func proof{output_ptr: felt*,pedersen_ptr: HashBuiltin*,range_check_ptr,ecdsa_ptr,bitwise_ptr: BitwiseBuiltin*,ec_op_ptr,poseidon_ptr}(address: felt, hash: Uint256) -> () {
     alloc_locals;
     let (keccak_ptr: felt*) = alloc();
     local keccak_ptr_start: felt* = keccak_ptr;
@@ -32,25 +32,19 @@ func proof{output_ptr: felt*,pedersen_ptr: HashBuiltin*,range_check_ptr,ecdsa_pt
         let (local cal_eth_address: felt) = public_key_point_to_eth_address(
             public_key_point=public_key
         );
-        let address_uint256 = felt_to_uint256(cal_eth_address);
-        let nonce_uint256 = felt_to_uint256(nonce);
-        let (local arr: Uint256*) = alloc();
-        assert arr[0] = address_uint256;
-        assert arr[1] = nonce_uint256;
-        let (local cal_hash: Uint256) = cairo_keccak_uint256s_bigend(n_elements=2, elements=arr);
         finalize_keccak(keccak_ptr_start=keccak_ptr_start, keccak_ptr_end=keccak_ptr);
     }
 
-    assert hash = cal_hash;
+    assert address = cal_eth_address;
 
     return ();
 }
 
 func main{output_ptr: felt*,pedersen_ptr: HashBuiltin*,range_check_ptr,ecdsa_ptr,bitwise_ptr: BitwiseBuiltin*,ec_op_ptr,keccak_ptr,poseidon_ptr}() -> () {
     alloc_locals;
-    local nonce;
-    %{ ids.nonce = program_input['nonce'] %}
-    assert [output_ptr] = nonce;
+    local address;
+    %{ ids.address = program_input['address'] %}
+    assert [output_ptr] = address;
     local hash_high;
     %{ ids.hash_high = program_input['hash_high'] %}
     assert [output_ptr + 1] = hash_high;
@@ -59,7 +53,7 @@ func main{output_ptr: felt*,pedersen_ptr: HashBuiltin*,range_check_ptr,ecdsa_ptr
     assert [output_ptr + 2] = hash_low;
 
     let hash = Uint256(low=[output_ptr + 2], high=[output_ptr + 1]);
-    proof(nonce=[output_ptr], hash=hash);
+    proof(address=[output_ptr], hash=hash);
 
     let output_ptr = output_ptr + 3;
     return ();
