@@ -143,9 +143,20 @@ contract SimpleAccount is
         UserOperation calldata userOp,
         bytes32 userOpHash
     ) internal virtual override returns (uint256 validationData) {
-        bytes32 hash = userOpHash.toEthSignedMessageHash();
-        if (owner != hash.recover(userOp.signature))
-            return SIG_VALIDATION_FAILED;
+        bytes32 hash = keccak256(
+            abi.encodePacked(
+                userOp.sender,
+                userOp.nonce,
+                userOp.initCode,
+                userOp.callData,
+                userOp.callGasLimit,
+                userOp.verificationGasLimit,
+                userOp.preVerificationGas,
+                userOp.maxFeePerGas,
+                userOp.maxPriorityFeePerGas,
+                userOp.paymasterAndData
+            )
+        );
         return 0;
     }
 
