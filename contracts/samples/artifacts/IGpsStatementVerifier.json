@@ -1,0 +1,90 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"verifyProofAndRegister(uint256[],uint256[],uint256[],uint256,uint256[])": "8bc5d8a3"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "uint256[]",
+					"name": "proofParams",
+					"type": "uint256[]"
+				},
+				{
+					"internalType": "uint256[]",
+					"name": "proof",
+					"type": "uint256[]"
+				},
+				{
+					"internalType": "uint256[]",
+					"name": "cairoAuxInput",
+					"type": "uint256[]"
+				},
+				{
+					"internalType": "uint256",
+					"name": "cairoVerifierId",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256[]",
+					"name": "publicMemoryData",
+					"type": "uint256[]"
+				}
+			],
+			"name": "verifyProofAndRegister",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}

@@ -1,0 +1,310 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "numSecurityBits_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "minProofOfWorkBits_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "oodsContractAddress_",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "val",
+						"type": "bool"
+					}
+				],
+				"name": "LogBool",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "val",
+						"type": "uint256"
+					}
+				],
+				"name": "LogDebug",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "val",
+						"type": "uint256"
+					}
+				],
+				"name": "LogGas",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "val",
+						"type": "bytes32"
+					}
+				],
+				"name": "LogValue",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "val",
+						"type": "uint256"
+					}
+				],
+				"name": "ReadFieldElementEvent",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "val",
+						"type": "bytes32"
+					}
+				],
+				"name": "ReadHashEvent",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "val",
+						"type": "uint256"
+					}
+				],
+				"name": "SendRandomnessEvent",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "publicInput",
+						"type": "uint256[]"
+					}
+				],
+				"name": "getPublicInputHash2",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "channelPtr",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nElements",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "targetPtr",
+						"type": "uint256"
+					}
+				],
+				"name": "sendFieldElements",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"AA/contracts/verifier/StarkVerifier.sol": "StarkVerifier"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"AA/contracts/MemoryMap.sol": {
+			"keccak256": "0xa5dc87554dc89c429a3ee9fb5d8db39104999778ec3d126418d4cd3cfefc444b",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://15c60d16ee5ec1d02087e9687108aed69f2204dd7c6a772f04fdc303d68c030e",
+				"dweb:/ipfs/QmdWdJ3sbhSkrf7qNJG2vpTsjPsrBFca5C7fsuzKLsD9YT"
+			]
+		},
+		"AA/contracts/PrimeFieldElement0.sol": {
+			"keccak256": "0xa32a0942dfdad8411f4f5208456c04c7c445cfed28ff0265b73afb584939b907",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://77dbfc212f7ebf36e2ec196e916175a19726bd4bb493a5b9b46048753b106007",
+				"dweb:/ipfs/QmenNnJ9eFPrAh5c5siVJZbCAvvnJmm49B5JSMTZdZde9c"
+			]
+		},
+		"AA/contracts/verifier/Fri.sol": {
+			"keccak256": "0x6c43d0d55b8c470d8d7a988cef38b9283f3a5a715426d2ab806193500de8204f",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://7c716b49234b0b73a5e5f4b11e8911eaf7be8bc8a7d06414190c94b4105635b6",
+				"dweb:/ipfs/QmZwDHZEqCUHLLqj59hMdV5ptDUuszieuUyAYf99yVZ5dL"
+			]
+		},
+		"AA/contracts/verifier/FriLayer.sol": {
+			"keccak256": "0x5ddcfed1aee35322df6daa2f120315fab7fb23b0859388fedeeb0acc89d82257",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://d2441b560f1361db20bf756699d4fe0589296d4d9a52eefd1df55d3e502bf718",
+				"dweb:/ipfs/QmYT1MvcALQDxXM8g8rxvegsn5UEb7QyZu2MbxLUxSmvYc"
+			]
+		},
+		"AA/contracts/verifier/FriTransform.sol": {
+			"keccak256": "0x64b52955fb33901d5859e09f82708cc5b095811bd49264fb093690d2c8d41f7f",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://500c0ea8c81ba281caed6fefaf7e36b912357cd62521f844ef30b72f4ef75b04",
+				"dweb:/ipfs/QmeaN9dUMqaqnSb5L1EhC6BKTntyeyDfFmqFi8qckoZHVg"
+			]
+		},
+		"AA/contracts/verifier/HornerEvaluator.sol": {
+			"keccak256": "0xa62430e14fa90c15fb324bcc10b9ef664774327dfcaa2d2a984fda14ca523032",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://e5bf4f27edbfc19f7742bc3f8e4d09fabff4ccbbe7d2db2ef9bf9cb4e411b463",
+				"dweb:/ipfs/Qmcq6fAMpaRfkUP9TMVhRBLYH8Q9ed3URoFMJ1CstWaoJ9"
+			]
+		},
+		"AA/contracts/verifier/IMerkleVerifier.sol": {
+			"keccak256": "0xc95b20d39f588b84bba3a7cdcdb9ba669f6624aa6209584702ddb11e98ee09a4",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://d3722af2e252b66be93a6fd2ee7bf94c2bc61db70aeea5168cdfa29db33b0682",
+				"dweb:/ipfs/QmejZQPT83YVnhU3A7DrzwCbT8ZcdosQqGEL5bryECK6wh"
+			]
+		},
+		"AA/contracts/verifier/IStarkVerifier.sol": {
+			"keccak256": "0x1228920b11c3c580721164350afe67576e95159a785a373c3e144be9d5ed62e2",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://afc6e163eaebe3209b73e3d5ab5c53aaa045a4661126c793970b40ba10c012de",
+				"dweb:/ipfs/QmVvs9SbQaiU87vYmpw9eUDwGyNz5duHuXU4AGL61Wq6BE"
+			]
+		},
+		"AA/contracts/verifier/MemoryAccessUtils.sol": {
+			"keccak256": "0x9539c7865e885fe83e317c4976302647dd258b5ff5b7f432965a5da27e92d16f",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://8077cb53f96c10148a36100cd47abcb35eee02f30d7d6cea2bd0a9a2ffd155b3",
+				"dweb:/ipfs/QmQ5DeoxwnGpm7r1u6B89uLNYy6MFfiQAMYu6dE5cG6NDs"
+			]
+		},
+		"AA/contracts/verifier/MerkleVerifier.sol": {
+			"keccak256": "0x3b14d2afa4c695e7cb31823bc4df2943c8677214c1b747630eaa9c23e617a55e",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://7f7a6386f24d2a581ce637d097bbffa15cc629a6a603acd33fe79edbea7601e5",
+				"dweb:/ipfs/QmU5B5SAZwJ8UvavMfYwRH85FyAJeVgJTBhSoBdGJRK7Nq"
+			]
+		},
+		"AA/contracts/verifier/Prng.sol": {
+			"keccak256": "0xbb6a4105d95cc235e3aee8b3abc9c269110b367cecc6283101ef7c24ab8ad06b",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://2ef55bd4fdac2c95a007c9fb54ca38c25afe9d18773a82b9d58681014289f33b",
+				"dweb:/ipfs/QmWYhcMHwGHxbdMiirPBiRqJwhDRXVzfCFUNNfLavqz2Nt"
+			]
+		},
+		"AA/contracts/verifier/StarkVerifier.sol": {
+			"keccak256": "0xd2eadd49a898eb23c4d3a413892867d1903b7d369dfbdf49f2508e2303829381",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://bf9c97d6b6f9a07ceba6238749aa65f24cb125300c56febe5bbc9b861786f76a",
+				"dweb:/ipfs/QmRaq386qtWpGEixDcf6S7z3N1sb6X2EsQEtPB8YQxSQaR"
+			]
+		},
+		"AA/contracts/verifier/VerifierChannel.sol": {
+			"keccak256": "0x60a43a314d573292a00c93c36e48c74649a96c734241d1289b22b350648e2ede",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://75bab08d0ed9a20c2c4ba2ad2dcb8ceedf9798c9e865c4cc3c9c8b8fcedd5abe",
+				"dweb:/ipfs/QmbPjVae9yUaxoC5WMPJo8U476kx2VmSGAPtbXSRQaaCvX"
+			]
+		},
+		"forge-std/console.sol": {
+			"keccak256": "0x91d5413c2434ca58fd278b6e1e79fd98d10c83931cc2596a6038eee4daeb34ba",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://91ccea707361e48b9b7a161fe81f496b9932bc471e9c4e4e1e9c283f2453cc70",
+				"dweb:/ipfs/QmcB66sZhQ6Kz7MUHcLE78YXRUZxoZnnxZjN6yATsbB2ec"
+			]
+		}
+	},
+	"version": 1
+}

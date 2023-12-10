@@ -1,0 +1,214 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"getPublicInputHash2(uint256[])": "45819b59",
+			"sendFieldElements(uint256,uint256,uint256)": "12b3cbee"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "numSecurityBits_",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "minProofOfWorkBits_",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "oodsContractAddress_",
+					"type": "address"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "constructor"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "bool",
+					"name": "val",
+					"type": "bool"
+				}
+			],
+			"name": "LogBool",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "val",
+					"type": "uint256"
+				}
+			],
+			"name": "LogDebug",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "string",
+					"name": "name",
+					"type": "string"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "val",
+					"type": "uint256"
+				}
+			],
+			"name": "LogGas",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "bytes32",
+					"name": "val",
+					"type": "bytes32"
+				}
+			],
+			"name": "LogValue",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "val",
+					"type": "uint256"
+				}
+			],
+			"name": "ReadFieldElementEvent",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "bytes32",
+					"name": "val",
+					"type": "bytes32"
+				}
+			],
+			"name": "ReadHashEvent",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "val",
+					"type": "uint256"
+				}
+			],
+			"name": "SendRandomnessEvent",
+			"type": "event"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256[]",
+					"name": "publicInput",
+					"type": "uint256[]"
+				}
+			],
+			"name": "getPublicInputHash2",
+			"outputs": [
+				{
+					"internalType": "bytes32",
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "channelPtr",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "nElements",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "targetPtr",
+					"type": "uint256"
+				}
+			],
+			"name": "sendFieldElements",
+			"outputs": [],
+			"stateMutability": "pure",
+			"type": "function"
+		}
+	]
+}

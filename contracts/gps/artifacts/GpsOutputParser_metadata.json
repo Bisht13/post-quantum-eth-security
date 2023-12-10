@@ -1,0 +1,210 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "programOutputFact",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32[]",
+						"name": "pagesHashes",
+						"type": "bytes32[]"
+					}
+				],
+				"name": "LogMemoryPagesHashes",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "PAGE_INFO_ADDRESS_OFFSET",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "PAGE_INFO_HASH_OFFSET",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "PAGE_INFO_SIZE",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "PAGE_INFO_SIZE_IN_BYTES",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "PAGE_INFO_SIZE_OFFSET",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "hasRegisteredFact",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "fact",
+						"type": "bytes32"
+					}
+				],
+				"name": "isValid",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"AA/contracts/gps/GpsOutputParser.sol": "GpsOutputParser"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"AA/contracts/CpuPublicInputOffsetsBase.sol": {
+			"keccak256": "0x581da65a6b8079c88bf6701a910686cf880d2e9180a3f7936acdc6ee78739ce6",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://cad8c7eb94e00ca4fa50d796ccaccbe8d1dd9f096584383f3990af5175e125a1",
+				"dweb:/ipfs/QmY8E3eJW7PFpQRPzfPtf2qFNd9VGdLUJDLprNZCt7aQHR"
+			]
+		},
+		"AA/contracts/FactRegistry.sol": {
+			"keccak256": "0xd7b40f1619ad2020c5a227bc0855dfa5e9b40a238731b4e5f383fdc9cb2e03f5",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://31e1d7128e86019c3b645ceb6ad3904ab195a959f89a81b15aee1df378a950fc",
+				"dweb:/ipfs/QmQhVdM3ut37QM9LLspWFihxZBuwQ3XedxPEH1EucLXCRx"
+			]
+		},
+		"AA/contracts/IFactRegistry.sol": {
+			"keccak256": "0xf2f440807966ada15e63fb19919f42f02b0a21d2b5afc461e716ef6aa616d880",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://6fc3608982ed4c58429d8ee75bfb82b52f6ad46d654075bacbf02962cf938407",
+				"dweb:/ipfs/QmeXFHk4vTZtSbcQTSVRzrXQ2PuyofY3CVTqKHNcH1hsx6"
+			]
+		},
+		"AA/contracts/IQueryableFactRegistry.sol": {
+			"keccak256": "0x6d401899fa6b540e6b3a18bdbca9bccf38a93cff93a43a73166deed6068e87b3",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://c208a68432793c427b5234782d8faa7a1ab4b17eb9ced76a48faf2bb7d3ae867",
+				"dweb:/ipfs/QmaFeANL4KhjXsQwdjrzwMPYXHLxAEjShc4CrwMERg2ZXw"
+			]
+		},
+		"AA/contracts/PageInfo.sol": {
+			"keccak256": "0x4d22f53d5240786ed124ee6b63623aad66cab70f6019cd3f19b12d06cbfc067d",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://3af4115ac3af88e7f408eed4c68c0d7c08b18014655baa77fa5b3190e62e89b6",
+				"dweb:/ipfs/QmavHwQxSSnPVhWbPfH4rwRcnxGipZxihbrFcZ12hJeXbv"
+			]
+		},
+		"AA/contracts/gps/GpsOutputParser.sol": {
+			"keccak256": "0x93cfbea5a7489a92165ac16bfb7b9891bd52019be3dbe11b7f92f2b2cd26060c",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://c2a2fcebdf67d3665ee74fb8af6b1d52864345ba80afab8970986488e01f881c",
+				"dweb:/ipfs/QmRqFUhAXX36RkLZA4jS7XbH81d3iAYYkMjrb3UnFrppEA"
+			]
+		},
+		"forge-std/console.sol": {
+			"keccak256": "0x91d5413c2434ca58fd278b6e1e79fd98d10c83931cc2596a6038eee4daeb34ba",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://91ccea707361e48b9b7a161fe81f496b9932bc471e9c4e4e1e9c283f2453cc70",
+				"dweb:/ipfs/QmcB66sZhQ6Kz7MUHcLE78YXRUZxoZnnxZjN6yATsbB2ec"
+			]
+		}
+	},
+	"version": 1
+}

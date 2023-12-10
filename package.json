@@ -1,0 +1,30 @@
+{
+  "name": "brb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Bisht13/brb.git"
+  },
+  "author": "Aditya Bisht",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bisht13/brb/issues"
+  },
+  "homepage": "https://github.com/Bisht13/brb#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ethers": "5.7.2",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.2.0",
+    "solc": "^0.8.23-fixed",
+    "web3": "^4.2.2"
+  },
+  "devDependencies": {
+    "hardhat": "^2.19.2"
+  }
+}

@@ -1,0 +1,202 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "val",
+						"type": "uint256"
+					}
+				],
+				"name": "LogGas",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "hasRegisteredFact",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "fact",
+						"type": "bytes32"
+					}
+				],
+				"name": "isValid",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "proof",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "friQueue",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "evaluationPoint",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "friStepSize",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expectedRoot",
+						"type": "uint256"
+					}
+				],
+				"name": "verifyFRI",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"AA/contracts/verifier/FriStatementContract.sol": "FriStatementContract"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"AA/contracts/FactRegistry.sol": {
+			"keccak256": "0xd7b40f1619ad2020c5a227bc0855dfa5e9b40a238731b4e5f383fdc9cb2e03f5",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://31e1d7128e86019c3b645ceb6ad3904ab195a959f89a81b15aee1df378a950fc",
+				"dweb:/ipfs/QmQhVdM3ut37QM9LLspWFihxZBuwQ3XedxPEH1EucLXCRx"
+			]
+		},
+		"AA/contracts/IFactRegistry.sol": {
+			"keccak256": "0xf2f440807966ada15e63fb19919f42f02b0a21d2b5afc461e716ef6aa616d880",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://6fc3608982ed4c58429d8ee75bfb82b52f6ad46d654075bacbf02962cf938407",
+				"dweb:/ipfs/QmeXFHk4vTZtSbcQTSVRzrXQ2PuyofY3CVTqKHNcH1hsx6"
+			]
+		},
+		"AA/contracts/IQueryableFactRegistry.sol": {
+			"keccak256": "0x6d401899fa6b540e6b3a18bdbca9bccf38a93cff93a43a73166deed6068e87b3",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://c208a68432793c427b5234782d8faa7a1ab4b17eb9ced76a48faf2bb7d3ae867",
+				"dweb:/ipfs/QmaFeANL4KhjXsQwdjrzwMPYXHLxAEjShc4CrwMERg2ZXw"
+			]
+		},
+		"AA/contracts/PrimeFieldElement0.sol": {
+			"keccak256": "0xa32a0942dfdad8411f4f5208456c04c7c445cfed28ff0265b73afb584939b907",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://77dbfc212f7ebf36e2ec196e916175a19726bd4bb493a5b9b46048753b106007",
+				"dweb:/ipfs/QmenNnJ9eFPrAh5c5siVJZbCAvvnJmm49B5JSMTZdZde9c"
+			]
+		},
+		"AA/contracts/verifier/FriLayer.sol": {
+			"keccak256": "0x5ddcfed1aee35322df6daa2f120315fab7fb23b0859388fedeeb0acc89d82257",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://d2441b560f1361db20bf756699d4fe0589296d4d9a52eefd1df55d3e502bf718",
+				"dweb:/ipfs/QmYT1MvcALQDxXM8g8rxvegsn5UEb7QyZu2MbxLUxSmvYc"
+			]
+		},
+		"AA/contracts/verifier/FriStatementContract.sol": {
+			"keccak256": "0x8f61a2a78c01784f0ac9d53b8f8edd0061a9f219ec1209812a5c1b232b5468a9",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://6df7bf2531b65365e6a8d02c5ccd1ec70d086180d931baddea5c9681d21d0a6c",
+				"dweb:/ipfs/QmZejFyeeQYiqgp4ywKuComRmse36w2KAzzGPqKVj8GJdP"
+			]
+		},
+		"AA/contracts/verifier/FriTransform.sol": {
+			"keccak256": "0x64b52955fb33901d5859e09f82708cc5b095811bd49264fb093690d2c8d41f7f",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://500c0ea8c81ba281caed6fefaf7e36b912357cd62521f844ef30b72f4ef75b04",
+				"dweb:/ipfs/QmeaN9dUMqaqnSb5L1EhC6BKTntyeyDfFmqFi8qckoZHVg"
+			]
+		},
+		"AA/contracts/verifier/IMerkleVerifier.sol": {
+			"keccak256": "0xc95b20d39f588b84bba3a7cdcdb9ba669f6624aa6209584702ddb11e98ee09a4",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://d3722af2e252b66be93a6fd2ee7bf94c2bc61db70aeea5168cdfa29db33b0682",
+				"dweb:/ipfs/QmejZQPT83YVnhU3A7DrzwCbT8ZcdosQqGEL5bryECK6wh"
+			]
+		},
+		"AA/contracts/verifier/MerkleVerifier.sol": {
+			"keccak256": "0x3b14d2afa4c695e7cb31823bc4df2943c8677214c1b747630eaa9c23e617a55e",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://7f7a6386f24d2a581ce637d097bbffa15cc629a6a603acd33fe79edbea7601e5",
+				"dweb:/ipfs/QmU5B5SAZwJ8UvavMfYwRH85FyAJeVgJTBhSoBdGJRK7Nq"
+			]
+		},
+		"forge-std/console.sol": {
+			"keccak256": "0x91d5413c2434ca58fd278b6e1e79fd98d10c83931cc2596a6038eee4daeb34ba",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://91ccea707361e48b9b7a161fe81f496b9932bc471e9c4e4e1e9c283f2453cc70",
+				"dweb:/ipfs/QmcB66sZhQ6Kz7MUHcLE78YXRUZxoZnnxZjN6yATsbB2ec"
+			]
+		}
+	},
+	"version": 1
+}
