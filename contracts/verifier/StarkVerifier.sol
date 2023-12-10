@@ -498,7 +498,6 @@ abstract contract StarkVerifier is
                 bytes32(ctx[MM_TRACE_COMMITMENT + 1])
             );
         }
-
         readQueryResponsesAndDecommit(
             ctx,
             getNColumnsInComposition(),
@@ -614,7 +613,6 @@ abstract contract StarkVerifier is
                 getNInteractionElements(),
                 getPtr(ctx, getMmInteractionElements())
             );
-
             // Read second trace commitment.
             ctx[MM_TRACE_COMMITMENT + 1] = uint256(readHash(channelPtr, true));
         }
@@ -626,14 +624,12 @@ abstract contract StarkVerifier is
             getPtr(ctx, MM_COMPOSITION_ALPHA)
         );
         ctx[MM_OODS_COMMITMENT] = uint256(readHash(channelPtr, true));
-
         // Send Out of Domain Sampling point.
         VerifierChannel.sendFieldElements(
             channelPtr,
             1,
             getPtr(ctx, MM_OODS_POINT)
         );
-
         // Read the answers to the Out of Domain Sampling.
         uint256 lmmOodsValues = getMmOodsValues();
         for (
@@ -649,11 +645,9 @@ abstract contract StarkVerifier is
             1,
             getPtr(ctx, MM_OODS_ALPHA)
         );
-
         ctx[MM_FRI_COMMITMENTS] = uint256(
             VerifierChannel.readHash(channelPtr, true)
         );
-
         uint256 nFriSteps = getFriStepSizes(ctx).length;
         uint256 fri_evalPointPtr = getPtr(ctx, MM_FRI_EVAL_POINTS);
         for (uint256 i = 1; i < nFriSteps - 1; i++) {
@@ -673,10 +667,8 @@ abstract contract StarkVerifier is
             1,
             getPtr(ctx, MM_FRI_EVAL_POINTS + nFriSteps - 1)
         );
-
         // Read FRI last layer commitment.
         readLastFriLayer(ctx);
-
         // Generate queries.
         // emit LogGas("Read FRI commitments", gasleft());
         VerifierChannel.verifyProofOfWork(

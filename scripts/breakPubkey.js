@@ -1,7 +1,8 @@
 const fs = require("fs");
 require("dotenv").config();
 
-publicKey = process.env.SIGNER_PUBLIC_KEY;
+publicKey =
+  "9f5826ef1a1e69983865f36bd37791e6a0d9444d1cdaf439854c5b9408b1a3f973bf3dd8fd4bbb5ba489017212dd57b56d4274fc023d0391a3ba2ad2d9eb9359";
 
 const filePath = "privateInput.txt";
 
@@ -26,7 +27,7 @@ secondHalf = BigInt("0x" + secondHalf);
 thirdHalf = BigInt("0x" + thirdHalf);
 fourthHalf = BigInt("0x" + fourthHalf);
 
-const dataToWrite = `${firstHalf},${secondHalf},${thirdHalf},${fourthHalf}`;
+const dataToWrite = `${firstHalf},\n${secondHalf},\n${thirdHalf},\n${fourthHalf}`;
 
 // Write to the file
 fs.writeFile(filePath, dataToWrite, (err) => {

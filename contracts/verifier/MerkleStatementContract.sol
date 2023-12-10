@@ -34,7 +34,8 @@ contract MerkleStatementContract is MerkleVerifier, FactRegistry {
         uint256 expectedRoot
     ) public {
         // Ensure 'height' is bounded as a sanity check (the bound is somewhat arbitrary).
-        require(height < 200, "Height must be < 200.");
+        require(height < 200, "Height too big");
+
         require(
             initialMerkleQueue.length <= MAX_N_MERKLE_VERIFIER_QUERIES * 2,
             "TOO_MANY_MERKLE_QUERIES"
@@ -108,6 +109,7 @@ contract MerkleStatementContract is MerkleVerifier, FactRegistry {
             // for the root).
             mstore(0x40, add(dataToHashPtr, 0x20))
         }
+
         require(badInput == 0, "INVALID_MERKLE_INDICES");
         bytes32 resRoot = verifyMerkle(
             channelPtr,
@@ -115,6 +117,7 @@ contract MerkleStatementContract is MerkleVerifier, FactRegistry {
             bytes32(expectedRoot),
             nQueries
         );
+
         bytes32 factHash;
         assembly {
             // Append the resulted root (should be the return value of verify) to dataToHashPtr.

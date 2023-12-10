@@ -11,10 +11,7 @@ const contractAddress = "0x8bF42b42C49082E85a9c42A7A052B487A1BEE2e8";
 const provider = new ethers.providers.JsonRpcProvider(
   "https://rpc.ankr.com/eth_sepolia"
 );
-const wallet = new ethers.Wallet(
-  "0x" + process.env.SIGNER_PRIVATE_KEY,
-  provider
-);
+const wallet = new ethers.Wallet("0x" + "", provider);
 
 const contract = new ethers.Contract(contractAddress, contractAbi, wallet);
 

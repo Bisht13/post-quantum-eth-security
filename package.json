@@ -23,5 +23,8 @@
     "fs-extra": "^11.2.0",
     "solc": "^0.8.23-fixed",
     "web3": "^4.2.2"
+  },
+  "devDependencies": {
+    "hardhat": "^2.19.2"
   }
 }

@@ -1,0 +1,9 @@
+/Users/paradox/Desktop/projects/brb/sandstorm-starkware-verifier-integration/target/debug/deps/libark_ff_optimized-fdd69c66fbea7732.rmeta: /Users/paradox/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-ff-optimized-0.4.1/src/lib.rs /Users/paradox/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-ff-optimized-0.4.1/src/fp31.rs /Users/paradox/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-ff-optimized-0.4.1/src/fp64.rs /Users/paradox/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-ff-optimized-0.4.1/src/macros.rs /Users/paradox/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-ff-optimized-0.4.1/src/../README.md
+
+/Users/paradox/Desktop/projects/brb/sandstorm-starkware-verifier-integration/target/debug/deps/ark_ff_optimized-fdd69c66fbea7732.d: /Users/paradox/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-ff-optimized-0.4.1/src/lib.rs /Users/paradox/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-ff-optimized-0.4.1/src/fp31.rs /Users/paradox/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-ff-optimized-0.4.1/src/fp64.rs /Users/paradox/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-ff-optimized-0.4.1/src/macros.rs /Users/paradox/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-ff-optimized-0.4.1/src/../README.md
+
+/Users/paradox/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-ff-optimized-0.4.1/src/lib.rs:
+/Users/paradox/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-ff-optimized-0.4.1/src/fp31.rs:
+/Users/paradox/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-ff-optimized-0.4.1/src/fp64.rs:
+/Users/paradox/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-ff-optimized-0.4.1/src/macros.rs:
+/Users/paradox/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-ff-optimized-0.4.1/src/../README.md:

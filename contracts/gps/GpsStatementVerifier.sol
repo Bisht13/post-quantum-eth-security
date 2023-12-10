@@ -96,7 +96,6 @@ contract GpsStatementVerifier is
         CairoVerifierContract cairoVerifier = cairoVerifierContractAddresses[
             cairoVerifierId
         ];
-
         // The values z and alpha are used only for the fact registration of the main page.
         // They are not part of the public input of CpuVerifier as they are computed there.
         // Take the relevant slice from 'cairoAuxInput'.
@@ -112,7 +111,6 @@ contract GpsStatementVerifier is
                 uint256 publicMemoryOffset,
                 uint256 selectedBuiltins
             ) = cairoVerifier.getLayoutInfo();
-
             require(
                 cairoAuxInput.length > publicMemoryOffset,
                 "Invalid cairoAuxInput length."
@@ -131,7 +129,6 @@ contract GpsStatementVerifier is
                 publicMemoryPages.length == nPages * (PAGE_INFO_SIZE + 1),
                 "Invalid publicMemoryPages length."
             );
-
             // Process public memory.
             (
                 uint256 publicMemoryLength,
@@ -146,7 +143,6 @@ contract GpsStatementVerifier is
             // Make sure the first page is valid.
             // If the size or the hash are invalid, it may indicate that there is a mismatch
             // between the prover and the verifier on the bootloader program or bootloader config.
-
             require(
                 publicMemoryPages[PAGE_INFO_SIZE_OFFSET] == publicMemoryLength,
                 "Invalid size for memory page 0."

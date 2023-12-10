@@ -1,0 +1,146 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "hasRegisteredFact",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "fact",
+						"type": "bytes32"
+					}
+				],
+				"name": "isValid",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "merkleView",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "initialMerkleQueue",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "height",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expectedRoot",
+						"type": "uint256"
+					}
+				],
+				"name": "verifyMerkle",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"AA/contracts/verifier/MerkleStatementContract.sol": "MerkleStatementContract"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"AA/contracts/FactRegistry.sol": {
+			"keccak256": "0xd7b40f1619ad2020c5a227bc0855dfa5e9b40a238731b4e5f383fdc9cb2e03f5",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://31e1d7128e86019c3b645ceb6ad3904ab195a959f89a81b15aee1df378a950fc",
+				"dweb:/ipfs/QmQhVdM3ut37QM9LLspWFihxZBuwQ3XedxPEH1EucLXCRx"
+			]
+		},
+		"AA/contracts/IFactRegistry.sol": {
+			"keccak256": "0xf2f440807966ada15e63fb19919f42f02b0a21d2b5afc461e716ef6aa616d880",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://6fc3608982ed4c58429d8ee75bfb82b52f6ad46d654075bacbf02962cf938407",
+				"dweb:/ipfs/QmeXFHk4vTZtSbcQTSVRzrXQ2PuyofY3CVTqKHNcH1hsx6"
+			]
+		},
+		"AA/contracts/IQueryableFactRegistry.sol": {
+			"keccak256": "0x6d401899fa6b540e6b3a18bdbca9bccf38a93cff93a43a73166deed6068e87b3",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://c208a68432793c427b5234782d8faa7a1ab4b17eb9ced76a48faf2bb7d3ae867",
+				"dweb:/ipfs/QmaFeANL4KhjXsQwdjrzwMPYXHLxAEjShc4CrwMERg2ZXw"
+			]
+		},
+		"AA/contracts/verifier/IMerkleVerifier.sol": {
+			"keccak256": "0xc95b20d39f588b84bba3a7cdcdb9ba669f6624aa6209584702ddb11e98ee09a4",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://d3722af2e252b66be93a6fd2ee7bf94c2bc61db70aeea5168cdfa29db33b0682",
+				"dweb:/ipfs/QmejZQPT83YVnhU3A7DrzwCbT8ZcdosQqGEL5bryECK6wh"
+			]
+		},
+		"AA/contracts/verifier/MerkleStatementContract.sol": {
+			"keccak256": "0x92b290e0454e8553d8684646ce2a01330d49ba79186a48545d918b215bf58c91",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://95a75d80025a7762ae500b925288931695e64a5926306d9d5fec98180757e679",
+				"dweb:/ipfs/QmPfR5abh1yuJ9AxrgTzPTPXsdURdPfkZMPsvNMHyu6yYM"
+			]
+		},
+		"AA/contracts/verifier/MerkleVerifier.sol": {
+			"keccak256": "0x3b14d2afa4c695e7cb31823bc4df2943c8677214c1b747630eaa9c23e617a55e",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://7f7a6386f24d2a581ce637d097bbffa15cc629a6a603acd33fe79edbea7601e5",
+				"dweb:/ipfs/QmU5B5SAZwJ8UvavMfYwRH85FyAJeVgJTBhSoBdGJRK7Nq"
+			]
+		}
+	},
+	"version": 1
+}

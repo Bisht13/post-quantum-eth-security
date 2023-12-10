@@ -49,7 +49,6 @@ contract FriStatementContract is FriLayer, FactRegistry {
 
         // Validate the FRI queue.
         validateFriQueue(friQueue);
-
         uint256 mmFriCtxSize = FRI_CTX_SIZE;
         uint256 nQueries = friQueue.length / 3; // NOLINT: divide-before-multiply.
         uint256 merkleQueuePtr;
@@ -132,7 +131,6 @@ contract FriStatementContract is FriLayer, FactRegistry {
             root := mload(add(dataToHash, 0x80))
             factHash := keccak256(dataToHash, 0xa0)
         }
-
         registerFact(factHash);
     }
 
