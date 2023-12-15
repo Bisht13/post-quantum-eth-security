@@ -118,4 +118,5 @@ Step-by-step instructions on how to generate and verify the proof. Currently, wo
 There you go! You have successfully made a quantum secure transaction on Ethereum.
 
 
-To see a demo of the project, check out this [video](https://drive.google.com/file/d/1pzCRlZFrfC4wWtRjAEcGmLhl6ieIb9rG/view?usp=sharing).
+To see a demo of the project, check out this [video](https://drive.google.com/file/d/1xFWF8sJjeHwp_zLHD97IQA3DjwYVosSu/view?usp=sharing).
+For on-chain verification, check out this [video](https://drive.google.com/file/d/1pzCRlZFrfC4wWtRjAEcGmLhl6ieIb9rG/view?usp=sharing).
