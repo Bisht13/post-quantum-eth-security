@@ -10,8 +10,8 @@ export default {
     chainID: '11155111',
     family: 'EVM',
     name: 'Sepolia',
-    provider: 'http://127.0.0.1:8545',
-    // provider: 'https://sepolia.infura.io/v3/bdabe9d2f9244005af0f566398e648da',
+    // provider: 'http://127.0.0.1:8545',
+    provider: 'https://sepolia.infura.io/v3/bdabe9d2f9244005af0f566398e648da',
     entryPointAddress: '0x2797b22CFACf9D243B0587ddEF368f8C362A81f2',
     bundler: 'http://localhost:3000/rpc',
     baseAsset: {

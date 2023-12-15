@@ -65,7 +65,7 @@ Step-by-step instructions on how to generate and verify the proof. Currently, wo
    ```sh
     cd bundler
     yarn && yarn preprocess
-    yarn run bundler --network sepolia  --unsafe
+    yarn run bundler --network sepolia --mnemonic [path_to_mnemonic.txt] --unsafe
     cd ..
    ```
 2. Then we will run Trampoline for creating our smart contract wallet.
