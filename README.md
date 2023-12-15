@@ -24,9 +24,9 @@ The proof of concept works as follows:
 - Using Sandstorm, the user generates a proof for the inputs.
 - The user then submits the proof to the blockchain for verification.
 
-The proof can then be verified by a smart contract wallet using account abstraction. The smart contract wallet can then be used to send transactions to other smart contracts.
+The proof can then be verified by a smart contract wallet using account abstraction. The smart contract wallet can then be used to send transactions.
 
-`Note: For verifying the proof of a transaction, in the function _validateSignature, the smart contract needs to call the verifying contract. If the proof is valid, the transaction will take place else it will revert resulting the signature validation to fail. This is NOT implemented yet.`
+For verifying the proof of a transaction, in the function *_validateSignature* of SimpleAccount.sol, the smart contract needs to call the verifying contract. If the proof is valid, the transaction will take place else it will revert resulting the signature validation to fail.
 
 
 ## Getting Started
@@ -61,14 +61,13 @@ To run the project, you need to setup the following:
 
 Step-by-step instructions on how to generate and verify the proof. Currently, works only on the Sepolia testnet.
 
-1. Set up the environment variables. `Note: SIGNER_PRIVATE_KEY and SIGNER_PUBLIC_KEY do not start with '0x' but SIGNER_ADDRESS does. Remove '0x40' from public key if present, this is used to define memory space and technically is not a part of the public key.`
+1. Set up the environment variables.
 2. Generate public and private inputs for the proof. 
     ```sh
         npm i
-        node scripts/breakPubkey.js
-        node scripts/publicInputGen.js
+        node scripts/setup.js
     ```
-    This will generate two files `publicInput.txt` and `privateInput.txt`. Copy the 4 values from `privateInput.txt` and paste them in first 4 values of `sandstorm-starkware-verifier-integration/bootloader_inputs.json`. Copy the 3 values from `publicInput.txt` and paste them in the last 3 values of `sandstorm-starkware-verifier-integration/bootloader_inputs.json`.
+    This will populate `sandstorm-starkware-verifier-integration/bootloader_inputs.json`.
 3. Generate the proof.
     ```sh
     cd sandstorm-starkware-verifier-integration
@@ -93,19 +92,26 @@ Step-by-step instructions on how to generate and verify the proof. Currently, wo
 
     cd ..
     ```
-4. After the proof is generated, we would create multiple JS files for submitting the proof to the blockchain.
+4. After the proof is generated, we would a blob.txt file in scripts folder. This file contains the proof in hex format.
    ```sh
-    python3.9 scripts/genJSFiles.py \
+    python3.9 scripts/generateProof.py \
         --proof ./sandstorm-starkware-verifier-integration/test/AutoGenProofData.sol \
         --output_folder ./scripts \
         --public_inputs ./sandstorm-starkware-verifier-integration/bootloader_inputs.json
    ```
-5. Verify the proof.
+5. Boot up the bundler. We would run our own bundler with custom settings.
    ```sh
-    chmod +x scripts/verify.sh
-    ./scripts/verify.sh
+    cd bundler
+    yarn && yarn preprocess
+    yarn run bundler --network sepolia  --unsafe
+    cd ..
    ```
-
-On completion, the proof will be verified on chain.
+6. Finally, we will run Trampoline for creating our smart contract wallet.
+   ```sh
+    cd trampoline
+    yarn && yarn start
+    cd ..
+   ```
+7. Now, we can import the extension in our browser, create a wallet and send a quantum secure transaction!
 
 To see a demo of the project, check out this [video](https://drive.google.com/file/d/1pzCRlZFrfC4wWtRjAEcGmLhl6ieIb9rG/view?usp=sharing).

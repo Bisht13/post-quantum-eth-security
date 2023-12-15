@@ -1,9 +1,9 @@
 {
-  "MemoryPageFactRegistry": "0x067245C79C3790bcc9A8e0456BefDa8A606f3592",
-  "MerkleStatementContract": "0xc09f9e5a17d74d64ff5a0cc23a2802d2d4212d89",
-  "FriStatementContract": "0x0aa5b3ed1df75dbfa031d3ab9f9a7f090b308366",
-  "cpuOods": "0xc655765a95be9037f4e38c8eaeee3c9c95702d08",
-  "CpuConstraintPoly": "0xa421e3d0A9629ef160165314f606329F787562e6",
+  "MemoryPageFactRegistry": "0xD11cbd0b252569Ff67551A95b33da45b23814d24",
+  "MerkleStatementContract": "0xe23195D7359297Be8d89F37a06240D63E527B623",
+  "FriStatementContract": "0x757c47a259FC8d3d4fDB53db53972C1B207976C1",
+  "cpuOods": "0x2d95f98a9a6666813ed0eafC82BEF5AAa3954337",
+  "CpuConstraintPoly": "0x53DcBFCD5F642A569136B850b9fCf559AAE32A0f",
   "PedersenHashPointsXColumn": "0xd3B0cCA0aEbf05d09f7D2C8e6Dbad68f2f1A7606",
   "PedersenHashPointsYColumn": "0xFe3712F51A44754ff118a79a34A077fEB9F1A67D",
   "EcdsaPointsXColumn": "0x62D52dAcf9dcA6fC0fC7440a56018e765878A563",
@@ -16,5 +16,7 @@
   "CpuFrilessVerifier": "0xC11B019217c0B9d33f6C253B5ad8e5079370fb45",
   "CairoBootloaderProgramPart1": "0x1BF98d19F00549314b998eED4C7d70C75fB1A856",
   "CairoBootloaderProgramPart2": "0x692A74A3AEd18487c0d5DCbB0315984BCa7eDc8B",
-  "GpsStatementVerifier": "0x29cc335Edb477AE261CfE3C03c7e4929a879Ffc7"
+  "GpsStatementVerifier": "0x7FE523743a8f002e9D64a1ccaFCDfcfA16fEb6b3",
+  "EntryPoint": "0x2797b22CFACf9D243B0587ddEF368f8C362A81f2",
+  "FactoryAddress": "0x6139236b16c07b96444b98125e67c99e8f33d9f5"
 }

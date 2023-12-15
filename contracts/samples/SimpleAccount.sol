@@ -11,6 +11,7 @@ import "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 
 import "../core/BaseAccount.sol";
 import "./callback/TokenCallbackHandler.sol";
+import "forge-std/console.sol";
 
 interface IMerkleStatementContract {
     function verifyMerkle(
@@ -100,16 +101,16 @@ contract SimpleAccount is
     // solhint-disable-next-line no-empty-blocks
     receive() external payable {}
 
-    // address merkleStatementContractAddress;
-    // address friStatementContractAddress;
-    // address gpsStatementVerifierAddress;
+    address merkleStatementContractAddress;
+    address friStatementContractAddress;
+    address gpsStatementVerifierAddress;
 
     constructor(IEntryPoint anEntryPoint) {
         _entryPoint = anEntryPoint;
         _disableInitializers();
-        // merkleStatementContractAddress = 0x88dB8a45622716071D822c6a3Cec5fe06Eff1c09;
-        // friStatementContractAddress = 0x757c47a259FC8d3d4fDB53db53972C1B207976C1;
-        // gpsStatementVerifierAddress = 0x7FE523743a8f002e9D64a1ccaFCDfcfA16fEb6b3;
+        merkleStatementContractAddress = 0x88dB8a45622716071D822c6a3Cec5fe06Eff1c09;
+        friStatementContractAddress = 0x757c47a259FC8d3d4fDB53db53972C1B207976C1;
+        gpsStatementVerifierAddress = 0x7FE523743a8f002e9D64a1ccaFCDfcfA16fEb6b3;
     }
 
     function _onlyOwner() internal view {
@@ -195,9 +196,9 @@ contract SimpleAccount is
         );
 
         uint256 txnId = uint256(uint256(userOp.nonce) % 10);
+        console.log("txnId", txnId);
         if (txnId == 0 || txnId == 1 || txnId == 2) {
             Merkle memory merkle = giveMerkle(userOp.signature);
-            // Update this address with your own
             IMerkleStatementContract(0xe23195D7359297Be8d89F37a06240D63E527B623)
                 .verifyMerkle(
                     merkle.View,
@@ -213,9 +214,9 @@ contract SimpleAccount is
             txnId == 7 ||
             txnId == 8
         ) {
+            console.log("here 1");
             Fri memory fri = giveFRI(userOp.signature);
-            // Update this address with your own
-            IFriStatementContract(0xA906Cb4c5ed10292f8701cFB57F1ED3a652E35B6)
+            IFriStatementContract(0x757c47a259FC8d3d4fDB53db53972C1B207976C1)
                 .verifyFRI(
                     fri.proofItems,
                     fri.queueItems,
@@ -223,7 +224,9 @@ contract SimpleAccount is
                     fri.stepSize,
                     fri.root
                 );
+            console.log("Here finished");
         } else if (txnId == 9) {
+            console.log("Starting");
             GPS memory gps = giveGPS(userOp.signature);
             uint256[] memory publicInput = new uint256[](3);
             publicInput[0] = uint256(uint160(owner));
@@ -232,8 +235,10 @@ contract SimpleAccount is
             (first, second) = bytes32Break(hash);
             publicInput[1] = uint256(uint128(first));
             publicInput[2] = uint256(uint128(second));
-            // Update this address with your own
-            IGpsStatementVerifier(0x05525aD1F2238b328b94534a3ADA88ee7f192155)
+            console.log(publicInput[0], gps.publicMemoryData[0]);
+            console.log(publicInput[1], gps.publicMemoryData[1]);
+            console.log(publicInput[2], gps.publicMemoryData[2]);
+            IGpsStatementVerifier(0x7FE523743a8f002e9D64a1ccaFCDfcfA16fEb6b3)
                 .verifyProofAndRegister(
                     gps.proofParams,
                     gps.proof,
@@ -241,7 +246,9 @@ contract SimpleAccount is
                     gps.cairoVerifierId,
                     publicInput
                 );
+            console.log("Starting 12345");
         }
+        console.log("Here completed");
         return 0;
     }
 
