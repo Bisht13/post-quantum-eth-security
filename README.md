@@ -61,14 +61,27 @@ To run the project, you need to setup the following:
 
 Step-by-step instructions on how to generate and verify the proof. Currently, works only on the Sepolia testnet.
 
-1. Set up the environment variables.
-2. Generate public and private inputs for the proof. 
+1. Boot up the bundler. We would run our own bundler with custom settings.
+   ```sh
+    cd bundler
+    yarn && yarn preprocess
+    yarn run bundler --network sepolia  --unsafe
+    cd ..
+   ```
+2. Then we will run Trampoline for creating our smart contract wallet.
+   ```sh
+    cd trampoline
+    yarn && yarn start
+    cd ..
+   ```
+3. After building Trampoline, we have to import the extension in our browser and create the wallet. Our wallet will be empty and not deployed yet. Send some funds to the wallet address. On attempting to send a transaction, you will find the private key in the console log as well as the transaction hash being prompted on Trampoline. Using these, setup the environment variables.
+4. Generate public and private inputs for the proof. 
     ```sh
-        npm i
-        node scripts/setup.js
+    npm i
+    node scripts/setup.js
     ```
     This will populate `sandstorm-starkware-verifier-integration/bootloader_inputs.json`.
-3. Generate the proof.
+5. Generate the proof.
     ```sh
     cd sandstorm-starkware-verifier-integration
 
@@ -92,26 +105,17 @@ Step-by-step instructions on how to generate and verify the proof. Currently, wo
 
     cd ..
     ```
-4. After the proof is generated, we would a blob.txt file in scripts folder. This file contains the proof in hex format.
+6. After the proof is generated, we would a blob.txt file in scripts folder. This file contains the proof in hex format.
    ```sh
     python3.9 scripts/generateProof.py \
         --proof ./sandstorm-starkware-verifier-integration/test/AutoGenProofData.sol \
         --output_folder ./scripts \
         --public_inputs ./sandstorm-starkware-verifier-integration/bootloader_inputs.json
    ```
-5. Boot up the bundler. We would run our own bundler with custom settings.
-   ```sh
-    cd bundler
-    yarn && yarn preprocess
-    yarn run bundler --network sepolia  --unsafe
-    cd ..
-   ```
-6. Finally, we will run Trampoline for creating our smart contract wallet.
-   ```sh
-    cd trampoline
-    yarn && yarn start
-    cd ..
-   ```
-7. Now, we can import the extension in our browser, create a wallet and send a quantum secure transaction!
+7. Copy the proof from blob.txt and paste it in the prompt on Trampoline and send the transaction.
+
+
+There you go! You have successfully made a quantum secure transaction on Ethereum.
+
 
 To see a demo of the project, check out this [video](https://drive.google.com/file/d/1pzCRlZFrfC4wWtRjAEcGmLhl6ieIb9rG/view?usp=sharing).
