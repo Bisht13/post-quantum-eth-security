@@ -36,8 +36,8 @@ export function getNetworkProvider(url: string): JsonRpcProvider {
     url = `https://${url}.infura.io/v3/${infuraId}`;
   }
   // console.log("url=", url);
-  // return new JsonRpcProvider("http://127.0.0.1:8545");
-  return new JsonRpcProvider(url);
+  return new JsonRpcProvider("http://127.0.0.1:8545");
+  // return new JsonRpcProvider(url);
 }
 
 export async function resolveConfiguration(
@@ -67,10 +67,10 @@ export async function resolveConfiguration(
   let wallet: Wallet;
   try {
     mnemonic = fs.readFileSync(config.mnemonic, "ascii").trim();
-    wallet = Wallet.fromMnemonic(mnemonic).connect(provider);
-    // wallet = new Wallet(
-    //   "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
-    // ).connect(provider);
+    // wallet = Wallet.fromMnemonic(mnemonic).connect(provider);
+    wallet = new Wallet(
+      "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
+    ).connect(provider);
   } catch (e: any) {
     throw new Error(
       `Unable to read --mnemonic ${config.mnemonic}: ${e.message as string}`
