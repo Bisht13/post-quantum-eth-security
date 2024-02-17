@@ -1,6 +1,6 @@
 # Post Quantum Ethereum Security
 
-This project is a proof of concept on how one can make Ethereum post quantumly secure without any modifications to the core protocol.  
+This project is a proof of concept on how one can make Ethereum post quantumly secure without any modifications to the core protocol. This concept was proposed by [Aayush Gupta](https://twitter.com/yush_g) in a [Ethereum Research post](https://ethresear.ch/t/quantum-proof-keypairs-with-ecdsa-zk/14901/2).
 
 ## Table of Contents
 
